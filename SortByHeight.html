@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Sort by Height </title>
+</head>
+<body>   
+</body>
+
+<script>
+
+    function sortByHeight(a) {
+        let b;
+        
+        for(let i = 0; i<a.length; i++){
+            for( let j =0; j<a.length; j++){
+
+                if(a[i] != -1 && a[i]<a[j] && a[j] != -1){
+                    b = a[i];
+                    a[i] = a[j];
+                    a[j] = b;
+                }
+            }
+        }
+     return a;
+}
+
+var array1 = [-1, 150, 190, 170, -1, -1, 160, 180];
+var array2 = [23, 54, -1, 43, 1, -1, -1, 77, -1, -1, -1, 3];
+
+console.log("Outputs");
+console.log(sortByHeight(array1));
+console.log(sortByHeight(array2));
+
+
+
+</script>
+</html>
